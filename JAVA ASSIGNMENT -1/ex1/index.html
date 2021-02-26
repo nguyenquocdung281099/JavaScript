@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 1.	Create two integer variables (a and b) after that assign value for them.
+         Then swap value of a and b and display to the screen.
+        Hint: Using a c variable to transfer value temporary. -->
+
+    <script>
+        var a = parseInt(prompt("enter a:"));
+        var b = parseInt(prompt("enter b:"));
+        alert (" a =" + a +"  "+ "b = "+ b);
+        var index=0;
+        // swap value of a and b
+        index = a;
+        a= b;
+        b=index;
+        document.write( "after swap"+"<br>"+"a = " + a +"<br>" + "b = " + b   );
+    </script>
+</body>
+</html>

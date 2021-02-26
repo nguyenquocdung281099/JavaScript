@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 3.	Write a program to find x from ax + b =0 
+    equation with a and b are input from keyboards. -->
+
+    <script>
+        var a = parseFloat(prompt("enter a : "));
+        var b = parseFloat(prompt("enter b : "));
+        if(a==0){
+            alert("the equation has no solution");
+        }
+        else{
+            if( b==0)
+            {
+                alert("the equation has countless solutions");
+            }
+            else{
+                var x = (-b)/a;
+                alert("x = " + x);
+            }
+        }
+    </script>
+</body>
+</html>

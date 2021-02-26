@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <script>
+        var avg;
+        var mathScore = parseFloat(prompt("enter math scores :"));
+        var physicsScore = parseFloat(prompt("enter physics scores:"));
+        var chemistryScore= parseFloat(prompt("enter chemistry scores:"));
+        if(isNaN(mathScore) || isNaN(physicsScore) || isNaN(chemistryScore) || mathScore<0 || physicsScore<0 || chemistryScore<0
+        || mathScore >10 || chemistryScore >10 || physicsScore>10)
+        {
+            alert("enter again ! please .")
+            mathScore = parseFloat(prompt("enter math scores :"));
+            physicsScore = parseFloat(prompt("enter physics scores:"));
+            chemistryScore= parseFloat(prompt("enter chemistry scores:"));
+        }
+        else{
+            avg= (mathScore + physicsScore + chemistryScore)/3;
+            avg = avg.toFixed(1)
+        }
+        //rank
+        if(avg>=8){
+            alert( "Rank : A and avg = " +avg);
+        }
+        else if(avg>=6.5){
+            alert( "Rank : B and avg = " +avg);
+        }
+        else if(avg>=5){
+            alert( "Rank : C and avg = " +avg);
+        }
+        else {
+            alert( "Rank : D and avg = " +avg);
+        }
+    </script>
+</body>
+</html>

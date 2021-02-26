@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- 4.	Write a program to find x from ax2 + bx + c =0 
+    equation with a and b are input from keyboards. -->
+
+    <script>
+        var a = parseFloat(prompt("enter a:"));
+        var b = parseFloat(prompt("enter b:"));
+        var c = parseFloat(prompt("enter c:"));
+        var denta =b*b - 4*a*c;
+        var x1,x2;
+        if(denta < 0){
+            alert("the equation has no solution");
+        }
+        if(denta==0){
+           
+            x1=(-b)/(2*a);
+             alert(" Equations have double solutions x = " + x1);
+        }
+        if(denta>0){
+            x1=((-b + Math.sqrt(denta))/(2*a)).toFixed(2);
+            
+            x2=((-b - Math.sqrt(denta))/(2*a)).toFixed(2);
+            alert(" Equations have two solutions x1 = " + x1 + "  x2 = " +x2 );
+       }
+        
+    </script>
+</body>
+</html>
