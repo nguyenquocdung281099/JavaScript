@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise 8</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+    <script>
+        do{
+            var month = parseInt(prompt("enter month (from 1 to 12 ) :"));
+            if(month > 12 || month <1){
+                alert("orror ! , you need enter number from 1 to 12")
+            }
+        }
+        while(month>12 || month<1)
+        function getLastDayOfMonth(month) {
+            var today = new Date;
+            var year = today.getFullYear();
+             let date = new Date(year, month, 0);
+              return date.getDate();
+        }
+        alert(getLastDayOfMonth(month));
+
+    </script>
+</body>
+</html>
