@@ -10,7 +10,25 @@
 <body>
    
     <script>
-   
+        var all = parseInt(prompt("enter number for all student : "));
+        var i =0;
+        var studentList= new Array;
+        do{
+          a= i+1;
+          alert("enter infomation for student " + a);
+        var studentCode = prompt("enter student code  : " );
+        var studentName =  prompt("enter student Name : ");
+        var studentAge = parseInt(prompt (" eneter Age : ")) ;
+        var studentSex= prompt("enter student sex : ");
+        var student = "Code : " + studentCode + ", Name : " + studentName+ ", Age : " + studentAge + " , Student sex : " + studentSex;
+        studentList[i]=student;
+        i++;
+        }
+        while(i < all);
+        for(var j =0; j< studentList.length ;j++)
+        {
+          document.write(studentList[j] + " <br>");
+        }
     </script>
 </body>
 </html>
