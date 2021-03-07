@@ -8,37 +8,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- 6.	Write a program to print to screen first 20 numbers of Fibonacci numbers. -->
+    
 
     <script>
         var x = parseInt(prompt("enter N : "));
         document.write("tam giacvuong: <br>")
-        for(var i= 0; i<x; i++)
+        for(var i=1; i<=x; i++)
         {
             for(var j =x-i ; j>=1 ; j--)
             {
-               document.write(" * ");
+               document.write(" &nbsp; ");
+            }
+            for(k=1;k<=i;k++ ){
+                document.write("*");
             }
             document.write("<br>");
+            
         }
-        document.write("tam giac can doi xung: <br>")
-        for(var i= 1; i<=x; i++)
-        { var k =1;
-            var l=2
-            for(var j =1 ; j<=((2*x)-1) ; j++)
-            {
-               
-                if(Math.abs(x-j)<= (i-1))
-                {
-                   document.write(i- Math.abs(x-j));
-                }
-                else{
-                    document.write(" &#160;");
-                }
-               
-            }
-            document.write("<br>");
-        }
+        
     </script>
 </body>
 </html>
