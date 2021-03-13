@@ -49,29 +49,48 @@ var sumArray2d = function(nameArray){
 
 
 // 5.	Write a function to enter a number and then check it is exist in array or not. 
-var searchMember = function(nameArray){
-    var member = parseInt(prompt("enter member you need search: "));
-    var result =false;
-    for(var i =0; i<nameArray.length;i++)
-    { 
-        for(var j =0; j<nameArray[i].length;j++)
-        {
-           if(member = nameArray[i][j])
-           {
-               result = true;
-               alert("have member");
-               break;
-           }
-        }
-        if(result == true){
-            break;
-        } 
+//way 1: 
+// var searchMember = function(nameArray){
+//     var member = parseInt(prompt("enter member you need search: "));
+//     var result =false;
+//     for(var i =0; i<nameArray.length;i++)
+//     { 
+//         for(var j =0; j<nameArray[i].length;j++)
+//         {
+//            if(member = nameArray[i][j])
+//            {
+//                result = true;
+//                alert("have member");
+//                break;
+//            }
+//         }
+//         if(result == true){
+//             break;
+//         } 
+//     }
+//     if(result==false){
+//         alert("not member");
+//     }
+// }
+
+
+
+//way2
+var searchMember= function(arrayName){
+    var member = (prompt("enter member : "));
+    var flat = arrayName.reduce(function(result,array){
+        return result.concat(array);
+    })
+    console.log(flat);
+    console.log(arrayName);
+    var isMember= flat.includes(member);
+    if(isMember==true){
+        alert("Members you need to find in position: ");
     }
-    if(result==false){
-        alert("not member");
+    else{
+        alert("not have this member in array");
     }
 }
-
 // 6.	Write a method to sort the elements of this array by ascending.
 var comparision = function(x, y){
 	return y-x;

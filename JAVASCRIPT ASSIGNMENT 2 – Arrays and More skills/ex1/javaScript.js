@@ -5,19 +5,34 @@ var printArray = function(arrayName){
     document.write(arrayName.join("-"));
 }
 // 3.	Write a function to permit user enter a value and find this is exits in array or not.
-var searchMember = function(arrayName){
-    var search = prompt("enter member you want search : ");
-    var result = false;
-    for(var i =0; i < arrayName.length ;i++)
-    {
-        if(search == arrayName[i])
-        {
-            result =true;
-             alert("Members you need to find in position: "+ i );
-             break;
-        }
+//way1
+// var searchMember = function(arrayName){
+//     var search = prompt("enter member you want search : ");
+//     var result = false;
+//     for(var i =0; i < arrayName.length ;i++)
+//     {
+//         if(search == arrayName[i])
+//         {
+//             result =true;
+//              alert("Members you need to find in position: "+ i );
+//              break;
+//         }
+//     }
+//     if(result==false){
+//         alert("not have this member in array");
+//     }
+// }
+ 
+
+
+//way2 
+var searchMember= function(arrayName){
+    var member = parseInt(prompt("enter member : "));
+    var isMember= arrayName.includes(member);
+    if(isMember==true){
+        alert("Members you need to find in position: ");
     }
-    if(result==false){
+    else{
         alert("not have this member in array");
     }
 }
