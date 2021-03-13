@@ -73,21 +73,32 @@ var searchMember = function(nameArray){
 }
 
 // 6.	Write a method to sort the elements of this array by ascending.
+var comparision = function(x, y){
+	return y-x;
+};
+
 var sortArray = function(array2){
+    // way-1
+    // for (var k =0; k<array2.length;k++) {
+    //     for(var i =0; i<array2[k].length;i++)
+    // {
+    //     for(var j = 1;j<array2[k].length;j++)
+    //     {
+    //         if(array2[k][j-1] > array2[k][j])
+    //         {
+    //           swap = array2[k][j];
+    //           array2[k][j]= array2[k][j-1];
+    //           array2[k][j-1]=swap;
+    //         }
+    //     }
+    // }
+    // }
     
-    for (var k =0; k<array2.length;k++) {
-        for(var i =0; i<array2[k].length;i++)
-    {
-        for(var j = 1;j<array2[k].length;j++)
-        {
-            if(array2[k][j-1] > array2[k][j])
-            {
-              swap = array2[k][j];
-              array2[k][j]= array2[k][j-1];
-              array2[k][j-1]=swap;
-            }
-        }
-    }
+
+
+    //way2
+    for(var i =0;i <array2.length ;i++){
+        (array2[i].sort(comparision));
     }
     document.write("<br>after sort ")
     printArray2d(array2);
