@@ -34,22 +34,21 @@ var deleteFromTaskList = function () {
 };
  
 var editTaskList = function () {
-   $("task").value = taskList.valueEdit;
-  taskList.edit(this.id, $("add_task")); // this => clicked link
+  $("task").value = taskList.tasks[this.id];
   taskList.idCurrent = this.id;
+  $("add_task").setAttribute("disabled","true");
+  $("clear_tasks").setAttribute("disabled","true");
+  $("editButton").removeAttribute("disabled");
 };
 var editfunction = function(){
-  if(taskList.storage.get().length == 0){
-    alert("you can add task before edit");
-  }
-  else{
-    taskList.tasks[taskList.idCurrent] = $("task").value;
-  taskList.save();
+   taskList.tasks[taskList.idCurrent] = $("task").value;
+   taskList.save();
   taskList.display();
   $("task").focus()
   $("task").value= "";
   $("add_task").removeAttribute("disabled");
-  }
+  $("clear_tasks").removeAttribute("disabled");
+  $("editButton").setAttribute("disabled","true");
 }
 window.onload = function () {
   $("add_task").onclick = addToTaskList;

@@ -24,12 +24,11 @@ var taskList = {
     this.sort();
     this.tasks.splice(i, 1);
   },
-  edit : function(i,addButton)
-  {
-     this.valueEdit=this.tasks[i];
-     addButton.setAttribute("disabled","true");
-
-  },
+  // edit : function(i,addButton)
+  // {
+  //    this.valueEdit=this.tasks[i];
+  //    addButton.setAttribute("disabled","true");
+  // },
   clear: function () {
     this.tasks.length = 0;
     this.storage.clear();
