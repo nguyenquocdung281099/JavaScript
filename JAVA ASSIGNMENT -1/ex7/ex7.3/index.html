@@ -10,21 +10,22 @@
 <body>
    
     <script>
-        var all = parseInt(prompt("enter number for all student : "));
-        var i =0;
+       
         var studentList= new Array;
+        i =1;
         do{
-          a= i+1;
-          alert("enter infomation for student " + a);
+          alert("enter infomation for student " + i);
         var studentCode = prompt("enter student code  : " );
         var studentName =  prompt("enter student Name : ");
         var studentAge = parseInt(prompt (" eneter Age : ")) ;
         var studentSex= prompt("enter student sex : ");
         var student = "Code : " + studentCode + ", Name : " + studentName+ ", Age : " + studentAge + " , Student sex : " + studentSex;
-        studentList[i]=student;
+        studentList[studentList.length] =student;
         i++;
+        input = prompt("if you dont want enter student press Esc");
+
         }
-        while(i < all);
+        while(input);
         for(var j =0; j< studentList.length ;j++)
         {
           document.write(studentList[j] + " <br>");
